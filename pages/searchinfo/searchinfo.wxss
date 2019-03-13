@@ -1,0 +1,58 @@
+/* pages/searchinfo/searchinfo.wxss */
+
+.header {
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+    text-align: center;
+}
+
+.header-date {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin: 0px;
+}
+
+.header-cell {
+    position: relative;
+    float: left;
+    width: 18%;
+    margin: 0px;
+}
+
+.list {
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+    text-align: center;
+}
+
+.list-date {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin: 0px;
+}
+
+.list-cell {
+    position: relative;
+    float: left;
+    width: 18%;
+    margin: 0px;
+}
+
+.searchlayout {
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.column {
+    position: relative;
+    float: left;
+    width: 49%;
+    margin: 0px;
+}

@@ -1,0 +1,53 @@
+<view class='searchlayout'>
+  <view class='column'>
+    <picker bindchange="bindYearPicker" value="{{Yearindex}}" range="{{YearData}}">
+      <view class="picker">年份：{{YearData[Yearindex]}}</view>
+    </picker>
+  </view>
+  <view class='column'>
+    <picker bindchange="bindMonthPicker" value="{{Monthindex}}" range="{{MonthData}}">
+      <view class="picker">月份：{{MonthData[Monthindex]}}</view>
+    </picker>
+  </view>
+
+</view>
+  <button class="btnSearch" bindtap="bingBtnSearch" size="default" type="primary" plain="default"
+    hover-class="button-hover" hover-stop-propagation="false" >
+    搜索
+  </button>
+<view>
+  <view class='header'>
+    <view class='header-date'>
+      <text>日期</text>
+    </view>
+    <view class='header-cell'>
+      <text>早空腹</text>
+    </view>
+    <view class='header-cell'>
+      <text>早饭后</text>
+    </view>
+    <view class='header-cell'>
+      <text>午饭后</text>
+    </view>
+    <view class='header-cell'>
+      <text>晚饭后</text>
+    </view>
+  </view>
+  <view class="list" wx:for="{{dailyrecordinfo}}" wx:key="date">
+    <view class="list-date">
+      <text>{{item.date}}</text>
+    </view>
+    <view class="list-cell">
+      <text>{{item.t0}}</text>
+    </view>
+    <view class="list-cell">
+      <text>{{item.t1}}</text>
+    </view>
+    <view class="list-cell">
+      <text>{{item.t2}}</text>
+    </view>
+    <view class="list-cell">
+      <text>{{item.t3}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+.grids {
+  position: relative;
+  overflow: hidden;
+  padding:10px;
+  text-align:center;
+}
+
+.grids-cell {
+  position: relative;
+  float: left;
+  width: 30%;
+  margin:5px;
+ }
+
+.grids-cell-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+  margin-top: 5px;
+}
+
+.grids-cell-icon image {
+  width: 80px;
+  height: 80px;
+}
+
+.grids-cell-label {
+  display: block;
+  font-size:14px;
+  text-align:center;
+}

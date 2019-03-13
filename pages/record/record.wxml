@@ -1,0 +1,10 @@
+ <view class="grids">
+    <view class="grids-cell" wx:for="{{itemList}}" wx:key="name">
+      <navigator url="{{item.url}}">
+        <view class="grids-cell-icon">
+          <image src="{{item.pic}}" mode="scaleToFill" />
+        </view>
+        <text class="grids-cell-label">{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>

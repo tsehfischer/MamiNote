@@ -1,0 +1,36 @@
+<form bindsubmit="bindformSubmit" bindreset="formReset">
+  <view class='cell'>
+    <view class="cell-text">
+      <text>日期：</text>
+    </view>
+    <view class="cell-value">
+      <text name="currdate">{{curr_date}}</text>
+    </view>
+  </view>
+
+  <view class='cell'>
+    <picker name="dailytime" bindchange="bindTimeChange" value="{{timeindex}}" range="{{timearea}}">
+      <view class="cell-text">
+        时间：
+      </view>
+
+      <view class="cell-value">
+        {{timearea[timeindex]}}
+      </view>
+
+    </picker>
+  </view>
+
+  <view class='cell'>
+    <view class="cell-text">
+      <text>数值：</text>
+    </view>
+    <view class="cell-value">
+      <input name="dailydata" type="digit"></input>
+    </view>
+  </view>
+
+  <view>
+    <button form-type="submit">保存</button>
+  </view>
+</form>
