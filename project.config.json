@@ -9,11 +9,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.2",
-	"appid": "wx6b332b0f8afdc7cd",
+	"appid": "wxc34ff3afabe2c3a1",
 	"projectname": "MamiMedicalNote",
 	"debugOptions": {
 		"hidedInDevtools": []

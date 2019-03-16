@@ -71,7 +71,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function() {
-
+        wx.showShareMenu({
+            withShareTicket: true
+        })
     },
 
     /**
@@ -140,15 +142,15 @@ Page({
         }
 
         var objectName = "t" + e.detail.value.dailytime;
-        if (this.data.dailydata[objectName]) {
-            wx.showToast({
-                title: '该时段已有记录',
-                icon: 'none',
-                duration: 1000
-            })
-            return;
+        // if (this.data.dailydata[objectName]) {
+        //     wx.showToast({
+        //         title: '该时段已有记录',
+        //         icon: 'none',
+        //         duration: 1000
+        //     })
+        //     return;
 
-        }
+        // }
 
         switch (e.detail.value.dailytime) {
             case "0": //早空腹
