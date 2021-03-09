@@ -1,0 +1,17 @@
+<view class='searchlayout'>
+  <view class='column'>
+    <picker bindchange="bindYearPicker" value="{{Yearindex}}" range="{{YearData}}">
+      <view class="picker">年份：{{YearData[Yearindex]}}</view>
+    </picker>
+  </view>
+  <view class='column'>
+    <picker bindchange="bindMonthPicker" value="{{Monthindex}}" range="{{MonthData}}">
+      <view class="picker">月份：{{MonthData[Monthindex]}}</view>
+    </picker>
+  </view>
+
+</view>
+  <button class="btnExport" bindtap="bingBtnExport" size="default" type="primary" plain="default"
+    hover-class="button-hover" hover-stop-propagation="false" >
+    导出
+  </button>

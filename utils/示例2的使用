@@ -1,0 +1,58 @@
+在入口文件 app.js 中引入：
+
+
+//app.js 
+const api = require('./api/index')
+
+App({
+  onLaunch: function () {
+  
+  },
+  // 全局数据中暴露api
+  globalData: { 
+    api
+  }
+})
+
+========================================================================
+在需要使用api 的页面中处理如下：
+
+// pages/list/list.js
+const app = getApp()
+
+const api = app.globalData.api
+
+Page({
+    
+  onLoad () {
+    this.init()
+  },
+
+  // 初始化
+  async init () {
+    await api.showLoading() // 显示loading
+    await this.getList()  // 请求数据
+    await api.hideLoading() // 等待请求数据成功后，隐藏loading
+  },
+
+  // 获取列表
+  getList () {
+    return new Promise((resolve, reject) => {
+      api.getData('http://127.0.0.1:3000/list', {
+          x: '',
+          y: ''
+      }).then((res) => {
+        this.setData({
+          list: res
+        })
+        console.log(res)
+        resolve()
+      })
+        .catch((err) => {
+          console.error(err)
+          reject(err)
+        })
+    })
+  },
+    
+})
